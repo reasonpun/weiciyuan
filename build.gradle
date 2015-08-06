@@ -4,7 +4,7 @@ buildscript {
         maven { url 'http://download.crashlytics.com/maven' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.13.2'
+        classpath 'com.android.tools.build:gradle:1.2.3'
         classpath 'com.crashlytics.tools.gradle:crashlytics-gradle:1.+'
     }
 }
@@ -33,8 +33,8 @@ android {
         applicationId "org.qii.weiciyuan"
         minSdkVersion 17
         targetSdkVersion 21
-        versionCode - 1
-        versionName null
+        versionCode 1
+        versionName '1.0.0.0'
     }
 
     sourceSets {
@@ -106,7 +106,6 @@ android {
             resValue "string", "weiciyuanOfficalWeiboName",
                     "org.qii.weiciyuan" + getApplicationIdSuffix() + ".mention://@四次元App"
             debuggable true
-            runProguard false
             signingConfig signingConfigs.debug
         }
         release {
@@ -114,7 +113,6 @@ android {
             resValue "string", "weiciyuanOfficalWeiboName",
                     "org.qii.weiciyuan" + ".mention://@四次元App"
             debuggable false
-            runProguard false
             signingConfig signingConfigs.release
         }
 
